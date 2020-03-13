@@ -5,7 +5,6 @@ public class Produto {
 	private double preco;
 
 	public Produto(String descricao, double preco) {
-		super();
 		this.descricao = descricao;
 		this.preco = preco;
 	}
@@ -28,7 +27,7 @@ public class Produto {
 
 	@Override
 	public String toString() {
-		return "Produto: descricao=" + descricao + ", preco=" + preco;
+		return  this.descricao + " | Preço: R$ " + this.preco;
 	}
 
 }

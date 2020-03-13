@@ -4,7 +4,6 @@ public class Funcionario {
 	private String nome;
 
 	public Funcionario(String nome) {
-		super();
 		this.nome = nome;
 	}
 
@@ -18,7 +17,7 @@ public class Funcionario {
 
 	@Override
 	public String toString() {
-		return "Funcionario: nome=" + nome;
+		return "\nFuncionario: " + nome;
 	}
 
 }

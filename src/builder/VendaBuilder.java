@@ -1,43 +1,42 @@
 package builder;
 
 public class VendaBuilder {
-	private Venda venda;
-	
+	Venda venda;
 	
 	public VendaBuilder() {
 		venda = new Venda();
 	}
 	
-	public VendaBuilder data(String data) {
+	public VendaBuilder Data(String data) {
 		venda.setData(data);
 		return this;
 	}
 	
-	public VendaBuilder clientePF(String nome, String cpf) {
+	public VendaBuilder ClientePF(String nome, String cpf) {
 		venda.setCliente(new ClientePF(nome, cpf));
 		return this;
 	}
 	
-	public VendaBuilder item(int quant, Produto produto) {
-		venda.addItem(new ItemVenda(quant, produto));
+	public VendaBuilder ClientePJ(String razaoSocial, String cnpj) {
+		venda.setCliente(new ClientePJ(razaoSocial, cnpj));
 		return this;
 	}
-
+	
 	public VendaBuilder Frete(double valor) {
-		venda.setFrete(valor);
+		venda.setFrete(new Frete(valor));
 		return this;
 	}
-
-	public VendaBuilder Item(int quant, Produto produto) {
-		venda.addItem(new ItemVenda(quant, produto));
-		return this;
-	}
-
+	
 	public VendaBuilder Funcionario(String nome) {
 		venda.setFuncionario(new Funcionario(nome));
-		return null;
+		return this;
 	}
-
+	
+	public VendaBuilder Item(int quantidade, Produto produto) {
+		venda.addItem(new ItemVenda(quantidade, produto));
+		return this;
+	}
+	
 	public Venda Build() {
 		return venda;
 	}

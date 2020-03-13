@@ -5,14 +5,19 @@ import java.util.List;
 
 public class Venda {
 	private String data;
-	private List<ItemVenda> itensVendidos = new ArrayList<>();
+	private List<ItemVenda> itensVendidos;
 	private Cliente cliente;
 	private Funcionario funcionario;
 	private Frete frete;
 
 	public Venda() {
+		itensVendidos = new ArrayList<>();
 	}
 
+	public void addItem(ItemVenda itemVenda) {
+		itensVendidos.add(itemVenda);
+	}
+	
 	public String getData() {
 		return data;
 	}
@@ -25,10 +30,6 @@ public class Venda {
 		return itensVendidos;
 	}
 
-	public void setItensVendidos(List<ItemVenda> itensVendidos) {
-		this.itensVendidos = itensVendidos;
-	}
-
 	public Cliente getCliente() {
 		return cliente;
 	}
@@ -37,12 +38,8 @@ public class Venda {
 		this.cliente = cliente;
 	}
 
-	public void addItem(ItemVenda itemVenda) {
-		itensVendidos.add(itemVenda);
-	}
-
-	public void setFrete(double valor) {
-		frete.setValor(valor);
+	public void setFrete(Frete frete) {
+		this.frete = frete;
 	}
 
 	public Frete getFrete() {
@@ -50,15 +47,16 @@ public class Venda {
 	}
 
 	public void setFuncionario(Funcionario funcionario) {
-		funcionario = funcionario;
+		this.funcionario = funcionario;
 	}
 
 	@Override
 	public String toString() {
-		return "Venda [data=" + data + ", itensVendidos=" + itensVendidos + ", cliente=" + cliente + ", funcionario="
-				+ funcionario + ", frete=" + frete + "]";
+		return "Data: "+this.data
+				+this.cliente
+				+this.itensVendidos
+				+this.frete
+				+this.funcionario;
 	}
-	
-	
 
 }

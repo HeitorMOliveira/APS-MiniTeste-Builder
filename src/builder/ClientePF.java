@@ -1,11 +1,10 @@
 package builder;
 
-public class ClientePF extends Cliente{
+public class ClientePF extends Cliente {
 	private String nome;
 	private String cpf;
 
 	public ClientePF(String nome, String cpf) {
-		super();
 		this.nome = nome;
 		this.cpf = cpf;
 	}
@@ -28,7 +27,7 @@ public class ClientePF extends Cliente{
 
 	@Override
 	public String toString() {
-		return "ClientePF: nome=" + nome + ", cpf=" + cpf;
+		return "\nCliente: " + this.nome + " | CPF: " + this.cpf;
 	}
 
 }

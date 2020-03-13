@@ -28,7 +28,7 @@ public class ItemVenda {
 
 	@Override
 	public String toString() {
-		return "ItemVenda: quantidade=" + quantidade + ", produto=" + produto;
+		return "\nQuantidade:" + quantidade + ", produto:" + produto;
 	}
 
 }

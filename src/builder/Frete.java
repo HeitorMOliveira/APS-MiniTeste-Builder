@@ -4,7 +4,6 @@ public class Frete {
 	private double valor;
 
 	public Frete(double valor) {
-		super();
 		this.valor = valor;
 	}
 
@@ -18,7 +17,7 @@ public class Frete {
 
 	@Override
 	public String toString() {
-		return "Frete: valor=" + valor;
+		return "\nFrete: R$ "+ this.valor;
 	}
 
 }

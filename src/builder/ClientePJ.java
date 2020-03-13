@@ -28,7 +28,7 @@ public class ClientePJ extends Cliente {
 
 	@Override
 	public String toString() {
-		return "ClientePJ: " + "razaoSocial=" + razaoSocial + ", cnpj=" + cnpj;
+		return "\nCliente: " + this.razaoSocial + " | CNPJ: " + this.cnpj;
 	}
 
 }
