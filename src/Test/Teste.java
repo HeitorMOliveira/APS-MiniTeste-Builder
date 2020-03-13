@@ -33,13 +33,13 @@ class Teste {
 		Produto smarthphone = new Produto("Smarthphone", 1500.00);
 		Venda venda = new VendaBuilder()
 				.Data("14/09/2019")
-				.ClientePF("Lindomar", "02937")
+				.ClientePJ("Celular C&A", "02937-9988/2")
 				.Frete(49.23)
 				.Item(1, smarthphone)
 				.Funcionario("Maria")
 				.Build();
 		assertEquals("Data: 14/09/2019"
-				+ "\nCliente: Lindomar | CPF: 02937["
+				+ "\nCliente: Celular C&A | CNPJ: 02937-9988/2["
 				+ "\nQuantidade:1, produto:Smarthphone | Preço: R$ 1500.0]"
 				+ "\nFrete: R$ 49.23"
 				+ "\nFuncionario: Maria",venda.toString());
@@ -73,7 +73,7 @@ class Teste {
 		Produto equipamento2 = new Produto("Luzes", 80.00);
 		Venda venda = new VendaBuilder()
 				.Data("13/03/2020")
-				.ClientePF("Ivan", "00009")
+				.ClientePJ("Tocmix", "75487-8845/6")
 				.Frete(90.00)
 				.Item(2, instrumento)
 				.Item(2, equipamento1)
@@ -82,7 +82,7 @@ class Teste {
 				.Build();
 		
 		assertEquals("Data: 13/03/2020"
-				+ "\nCliente: Ivan | CPF: 00009["
+				+ "\nCliente: Tocmix | CNPJ: 75487-8845/6["
 				+ "\nQuantidade:2, produto:Guitarra | Preço: R$ 600.0, "
 				+ "\nQuantidade:2, produto:Caixa de Som | Preço: R$ 350.0, "
 				+ "\nQuantidade:5, produto:Luzes | Preço: R$ 80.0]"
